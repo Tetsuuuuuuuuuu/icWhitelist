@@ -14,4 +14,5 @@ How to use:
 - To enter the whitelist mode use the command /whitelistmode
 - To toggle the Whitelist Status of a player use /whitelist playerid
 
+
 For Support please open a issues or contact me on Discord (Tetsu#9030)
