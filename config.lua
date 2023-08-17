@@ -4,6 +4,7 @@ Config.allowedDistance = 100.0 -- The distance the player can go away from the s
 Config.enableInvincibility = false -- If true, the player will be invincible while in whitelist mode
 Config.spawn = vector3(-1037.768, -2737.674, 20.16927) -- The position where the player will be teleported to when he activates the whitelist mode
 Config.dutySkin = { -- The Skin admins wear when in whitelist mode
+	sex	    = 0,
 	tshirt_1    = 0,
 	tshirt_2    = 0,
 	torso_1     = 0,
