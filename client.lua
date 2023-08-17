@@ -35,7 +35,8 @@ RegisterNetEvent("icw:toggleEinreiseMode", function ()
 
 			SetEntityCoords(ped, spawn.x, spawn.y, spawn.z, false, false, false, false)
 
-
+			Config.dutySkin["sex"] = lastSkin["sex"]
+					
 			TriggerEvent('skinchanger:loadSkin', Config.dutySkin)
 
 			if Config.enableInvincibility then
