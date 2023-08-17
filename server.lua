@@ -122,10 +122,15 @@ ESX.RegisterCommand('whitelist', Config.requiredGroup, function(xPlayer, args, s
 	   	if curWLState == true then
 			sourceXPlayer.showNotification(Config.locales[Config.language]["whitelist_succesfull_source"], false, false, 140)
 			targetXPlayer.showNotification(Config.locales[Config.language]["whitelist_succesfull_target"], false, false, 140)
-			
+					
+			local ped = GetPlayerPed(targetXPlayer.source)
+			SetEntityPosition(ped, Config.whitelistedSpawn.x, Config.whitelistedSpawn.y, Config.whitelistedSpawn.z)
 	   	else
 			sourceXPlayer.showNotification(Config.locales[Config.language]["removewhitelist_succesfull_source"], false, false, 140)
 			targetXPlayer.showNotification(Config.locales[Config.language]["removewhitelist_succesfull_target"], false, false, 140)
+
+			local ped = GetPlayerPed(targetXPlayer.source)
+			SetEntityPosition(ped, Config.spawn.x, Config.spawn.y, Config.spawn.z)
 	   	end
 
 		if Config.useDiscordLogging == true then
