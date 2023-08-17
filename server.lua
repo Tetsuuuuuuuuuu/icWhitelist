@@ -138,7 +138,7 @@ ESX.RegisterCommand('whitelist', Config.requiredGroup, function(sourceXPlayer, a
 
 		TriggerClientEvent("icw:resultWLState", targetXPlayer.source, curWLState)
 	end)
-end, false, {help = Config.locales[Config.language]["commandhelp"]})
+end, false, {help = Config.locales[Config.language]["commandhelp"]}, {"ID"})
 
 
 ESX.RegisterCommand('whitelistmode', Config.requiredGroup, function(xPlayer, args, showError)
