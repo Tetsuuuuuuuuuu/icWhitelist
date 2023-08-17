@@ -77,9 +77,8 @@ local function logAction(sourceXPlayer, targetXPlayer, newWLState)
 	PerformHttpRequest(Config.webhook_url, function(err, text, headers) end, 'POST', json.encode({username = "Whitelist by Tetsu#9030", embeds = embed}), { ['Content-Type'] = 'application/json' })
 end
 
-ESX.RegisterCommand('whitelist', Config.requiredGroup, function(xPlayer, args, showError)
+ESX.RegisterCommand('whitelist', Config.requiredGroup, function(sourceXPlayer, args, showError)
 	local target = args[1]
-	local sourceXPlayer = ESX.GetPlayerFromId(source)
 
 	if target == nil then
 		sourceXPlayer.showNotification(Config.locales[Config.language]["missing_targetid"], false, false, 140)
